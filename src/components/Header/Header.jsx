@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Container } from "reactstrap";
-import logo from "../../assets/images/GCC-Logo.svg";
+import logo from "../../assets/images/gcc_logo.svg";
 import { NavLink, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { cartUiActions } from "../../store/shopping-cart/cartUiSlice";

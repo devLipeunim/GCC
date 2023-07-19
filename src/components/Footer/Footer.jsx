@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
-import logo from "../../assets/images/GCC-Logo.svg";
+import logo from "../../assets/images/gcc_logo.svg";
 import "../../styles/footer.css";
 import { Link } from "react-router-dom";
 const Footer = () => {
