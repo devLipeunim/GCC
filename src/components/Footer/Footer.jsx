@@ -49,8 +49,8 @@ const Footer = () => {
           </Col>
 
           <Col lg="3" md="4" sm="6">
-            <h5 className="footer__title">Newsletter</h5>
-            <p>Subscribe our newsletter</p>
+            <h5 className="footer__title">Newsletter Sign Up</h5>
+            <p>Subscribe today and receive great offers and updates straight to your mailbox</p>
             <div className="newsletter">
               <input type="email" placeholder="Enter your email" />
               <span>

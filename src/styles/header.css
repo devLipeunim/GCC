@@ -3,13 +3,9 @@
   height: 100px;
   line-height: 100px;
 }
-
-.logo {
-  text-align: center;
-}
 .logo img {
   width: calc(100% - 30%);
-  object-fit: contain;
+  /* object-fit: contain; */
   /* margin-top: -40px; */
 }
 
