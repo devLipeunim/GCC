@@ -56,11 +56,19 @@ const AllFoods = () => {
             <Col lg="6" md="6" sm="6" xs="12" className="mb-5">
               <div className="sorting__widget text-end">
                 <select className="w-50">
-                  <option>Default</option>
+                  <option>BreakFast</option>
+                  <option value="ascending">Lunch</option>
+                  <option value="descending">Snacks</option>
+                  <option value="low-price">Main Menu</option>
+                  <option value="high-price">Soup & Swallow</option>
+                  <option value="low-price">Pepper Soup</option>
+                  <option value="low-price">Rice Menu</option>
+                  <option value="low-price">Drinks</option>
+                  {/* <option>Default</option>
                   <option value="ascending">Alphabetically, A-Z</option>
                   <option value="descending">Alphabetically, Z-A</option>
                   <option value="high-price">High Price</option>
-                  <option value="low-price">Low Price</option>
+                  <option value="low-price">Low Price</option> */}
                 </select>
               </div>
             </Col>
