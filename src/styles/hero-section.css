@@ -36,7 +36,7 @@
   background: rgb(15, 14, 14);
 }
 
-.animated-img{
+/* .animated-img{
   animation: move 3s infinite ease alternate;
 }
 
@@ -47,7 +47,7 @@
   to {
     transform: translateY(10px);
   }
-}
+} */
 
 .animated-arrow-right{
   margin-left: 0.5rem;

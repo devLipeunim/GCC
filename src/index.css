@@ -11,6 +11,10 @@ body {
   background: #fcfcfc;
   font-family: "Istok Web", sans-serif;
   scroll-behavior: smooth !important;
+  overflow-x: hidden;
+}
+html{
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
