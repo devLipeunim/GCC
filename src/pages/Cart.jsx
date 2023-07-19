@@ -42,7 +42,7 @@ const Cart = () => {
                   Subtotal: &#8358;
                   <span className="cart__subtotal">{totalAmount}</span>
                 </h6>
-                <p>Taxes and shipping will calculate at checkout</p>
+                <p>Delivery fee will be calculated at checkout</p>
                 <div className="cart__page-btn">
                   <button className="addTOCart__btn me-4">
                     <Link to="/foods">Continue Shopping</Link>

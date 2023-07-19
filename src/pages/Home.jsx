@@ -9,7 +9,7 @@ import "../styles/home.css";
 import featureImg01 from "../assets/images/order.png";
 import featureImg02 from "../assets/images/service-01.png";
 import featureImg03 from "../assets/images/smile.png";
-import products from "../assets/fake-data/products.jsx";
+import products from "../assets/data/products.jsx";
 import foodCategoryImg01 from "../assets/images/hamburger.png";
 import foodCategoryImg02 from "../assets/images/pizza.png";
 import foodCategoryImg03 from "../assets/images/bread.png";
@@ -34,7 +34,7 @@ const featureData = [
   },
 ];
 const Home = () => {
-  const [category, setCategory] = useState("ALL");
+  const [category, setCategory] = useState("Rice");
   const [allProducts, setAllProducts] = useState(products);
   const [hotPizza, setHotPizza] = useState([]);
 
@@ -45,30 +45,36 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    if (category === "ALL") {
-      setAllProducts(products);
+    if (category === "Rice") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "Rice"
+      );
+      const popularRice = filteredProducts.slice(0, 4);
+      setAllProducts(popularRice);
     }
 
-    if (category === "BURGER") {
+    if (category === "Snacks") {
       const filteredProducts = products.filter(
-        (item) => item.category === "Burger"
+        (item) => item.category === "Snacks"
       );
-
-      setAllProducts(filteredProducts);
+      const popularSnacks = filteredProducts.slice(0, 4);
+      setAllProducts(popularSnacks);
     }
 
-    if (category === "PIZZA") {
+    if (category === "Soup & Swallow") {
       const filteredProducts = products.filter(
-        (item) => item.category === "Pizza"
+        (item) => item.category === "Soup & Swallow"
       );
-
-      setAllProducts(filteredProducts);
+      const popularSoup = filteredProducts.slice(0, 4);
+      setAllProducts(popularSoup);
     }
 
-    if (category === "BREAD") {
+    if (category === "Sides") {
       const filteredProducts = products.filter(
-        (item) => item.category === "Bread"
+        (item) => item.category === "Sides"
       );
+      const popularSides = filteredProducts.slice(0, 3);
+      setAllProducts(popularSides);
 
       setAllProducts(filteredProducts);
     }
@@ -91,7 +97,8 @@ const Home = () => {
 
                 <div className="hero__btns d-flex align-items-center gap-5 mt-4">
                   <button className="order__btn d-flex align-items-center justify-content-between">
-                    Order now <i className="ri-arrow-right-s-line animated-arrow-right"></i>
+                    Order now{" "}
+                    <i className="ri-arrow-right-s-line animated-arrow-right"></i>
                   </button>
 
                   <button className="all__foods-btn">
@@ -119,7 +126,11 @@ const Home = () => {
 
             <Col lg="6" md="6">
               <div className="hero__img">
-                <img src={heroImg} alt="hero-img" className="w-100 animated-img" />
+                <img
+                  src={heroImg}
+                  alt="hero-img"
+                  className="w-100 animated-img"
+                />
               </div>
             </Col>
           </Row>
@@ -127,7 +138,9 @@ const Home = () => {
       </section>
 
       <section className="pt-0">
-      <h5 className="mb-4 text-center"><b>MENU</b></h5>
+        <h5 className="mb-4 text-center">
+          <b>MENU</b>
+        </h5>
         <Category />
       </section>
 
@@ -138,10 +151,11 @@ const Home = () => {
               <h6 className="feature__subtitle mb-4">How it works</h6>
               <h2 className="feature__title">Just sit back, we will</h2>
               <h2 className="feature__title">
-                 <span>take care</span>
+                <span>take care</span>
               </h2>
               <p className="feature__text">
-                Relish a world of flavors, while we bring them to your door-step.{" "}
+                Relish a world of flavors, while we bring them to your
+                door-step.{" "}
               </p>
             </Col>
 
@@ -151,7 +165,11 @@ const Home = () => {
                   <img
                     src={item.imgUrl}
                     alt="feature-img"
-                    className="w-25 mb-3"
+                    style={{
+                      width: "100px",
+                      height: "100px",
+                      marginBottom: "10px",
+                    }}
                   />
                   <h5 className=" fw-bold mb-3">{item.title}</h5>
                   <p>{item.desc}</p>
@@ -170,43 +188,42 @@ const Home = () => {
             </Col>
 
             <Col lg="12">
-              <div className="food__category d-flex align-items-center justify-content-center gap-4">
+              <div
+                className="food__category"
+              >
                 <button
                   className={`all__btn  &#8358;{
-                    category === "ALL" ? "foodBtnActive" : ""
+                    category === "Rice" ? "foodBtnActive" : ""
                   } `}
-                  onClick={() => setCategory("ALL")}
+                  onClick={() => setCategory("Rice")}
                 >
-                  All
+                  Rice
                 </button>
                 <button
                   className={`d-flex align-items-center gap-2 &#8358;{
-                    category === "BURGER" ? "foodBtnActive" : ""
+                    category === "Snacks" ? "foodBtnActive" : ""
                   } `}
-                  onClick={() => setCategory("BURGER")}
+                  onClick={() => setCategory("Snacks")}
                 >
-                  <img src={foodCategoryImg01} alt="" />
-                  Burger
-                </button>
-
-                <button
-                  className={`d-flex align-items-center gap-2 &#8358;{
-                    category === "PIZZA" ? "foodBtnActive" : ""
-                  } `}
-                  onClick={() => setCategory("PIZZA")}
-                >
-                  <img src={foodCategoryImg02} alt="" />
-                  Pizza
+                  Snacks
                 </button>
 
                 <button
                   className={`d-flex align-items-center gap-2 &#8358;{
-                    category === "BREAD" ? "foodBtnActive" : ""
+                    category === "Soup & Swallow" ? "foodBtnActive" : ""
                   } `}
-                  onClick={() => setCategory("BREAD")}
+                  onClick={() => setCategory("Soup & Swallow")}
                 >
-                  <img src={foodCategoryImg03} alt="" />
-                  Bread
+                  Soup
+                </button>
+
+                <button
+                  className={`d-flex align-items-center gap-2 &#8358;{
+                    category === "Sides" ? "foodBtnActive" : ""
+                  } `}
+                  onClick={() => setCategory("Sides")}
+                >
+                  Sides
                 </button>
               </div>
             </Col>
@@ -224,7 +241,11 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="6" md="6">
-              <img src={whyImg} alt="why-tasty-treat" className="w-100 animated-img" />
+              <img
+                src={whyImg}
+                alt="why-tasty-treat"
+                className="w-100 animated-img"
+              />
             </Col>
 
             <Col lg="6" md="6">
@@ -239,17 +260,17 @@ const Home = () => {
                   our food options to the speed and accuracy of our delivery
                   service. We believe that, delivering excellence is not just a
                   goal, but the standard we hold ourselves to every single day.
-                  whether you&#39;re ordering for the first time or are a returning
-                  customer, we are committed to providing a top-notch service
-                  every time. Our team works tirelessly to ensure that every
-                  aspect of your experience with us exceeds your expectations.
-                  We constantly strive to improve our service and welcome
-                  feedback from our customers so that we can continue to enhance
-                  our offerings. With our top-notch service, you can have peace
-                  of mind knowing that we are dedicated to providing the highest
-                  level of satisfaction to our customers. Try us today and
-                  experience the convenience of quick, easy, and delicious food
-                  delivery right at your fingertips!
+                  whether you&#39;re ordering for the first time or are a
+                  returning customer, we are committed to providing a top-notch
+                  service every time. Our team works tirelessly to ensure that
+                  every aspect of your experience with us exceeds your
+                  expectations. We constantly strive to improve our service and
+                  welcome feedback from our customers so that we can continue to
+                  enhance our offerings. With our top-notch service, you can
+                  have peace of mind knowing that we are dedicated to providing
+                  the highest level of satisfaction to our customers. Try us
+                  today and experience the convenience of quick, easy, and
+                  delicious food delivery right at your fingertips!
                 </p>
 
                 <ListGroup className="mt-2">
@@ -306,7 +327,8 @@ const Home = () => {
                   What our <span>customers</span> are saying
                 </h2>
                 <p className="testimonial__desc">
-                  Real voices, Real experiences - Discover the praise from our valued customers!
+                  Real voices, Real experiences - Discover the praise from our
+                  valued customers!
                 </p>
 
                 <TestimonialSlider />

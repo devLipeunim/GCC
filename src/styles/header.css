@@ -5,8 +5,6 @@
 }
 .logo img {
   width: calc(100% - 30%);
-  /* object-fit: contain; */
-  /* margin-top: -40px; */
 }
 
 .logo h5 {

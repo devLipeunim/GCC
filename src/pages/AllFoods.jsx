@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 import { Container, Row, Col } from "reactstrap";
-import products from "../assets/fake-data/products";
+import products from "../assets/data/products";
 import ProductCard from "../components/UI/product-card/ProductCard";
 import ReactPaginate from "react-paginate";
 import "../styles/all-foods.css";
@@ -56,6 +56,7 @@ const AllFoods = () => {
             <Col lg="6" md="6" sm="6" xs="12" className="mb-5">
               <div className="sorting__widget text-end">
                 <select className="w-50">
+                  <option>MENU</option>
                   <option>BreakFast</option>
                   <option value="ascending">Lunch</option>
                   <option value="descending">Snacks</option>

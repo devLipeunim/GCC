@@ -10,7 +10,10 @@ const Footer = () => {
         <Row>
           <Col lg="3" md="4" sm="6">
             <div className=" footer__logo text-start">
+            <Link to="/home">
+              {" "}
               <img src={logo} alt="logo" />
+            </Link>
               <p>
                 Elevate your dining experience: From farm-fresh delights to gourmet indulgences. Discover the epitome of convenience and taste, delivered straight to you.
               </p>

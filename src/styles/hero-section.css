@@ -37,7 +37,6 @@
 }
 
 .animated-img{
-  object-fit: contain;
   animation: move 3s infinite ease alternate;
 }
 
