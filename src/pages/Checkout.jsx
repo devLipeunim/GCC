@@ -106,7 +106,7 @@ const Checkout = () => {
     // redirect_url: "https://gcc-ssa.vercel.app/success.html",
     subaccounts: [
       {
-        id: "RS_9A6D440B560005800E890F75CF3FFFA4",
+        id: "RS_4B54A600B0B7380424BA295A393B645B",
         transaction_charge_type: "percentage",
         transaction_charge: 0,
       },
