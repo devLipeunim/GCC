@@ -94,7 +94,8 @@ const Checkout = () => {
   const cartDataInfo = JSON.stringify(cartData);
   console.log(cartDataInfo);
   const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
-  const totalAmount = parseInt(cartTotalAmount) + parseInt(deliveryFee) + 50;
+  const totalAmount = deliveryFee!== undefined? parseInt(cartTotalAmount) + parseInt(deliveryFee) + 50:cartTotalAmount
+  console.log(totalAmount)
   const handleClearCart = () => {
     dispatch(cartActions.clearCart());
   };
@@ -103,7 +104,7 @@ const Checkout = () => {
     tx_ref: txRef,
     amount: totalAmount,
     currency: "NGN",
-    // redirect_url: "https://gcc-ssa.vercel.app/success.html",
+    redirect_url: "https://gcc-ssa.vercel.app/success.html",
     subaccounts: [
       {
         id: "RS_4B54A600B0B7380424BA295A393B645B",
