@@ -16,7 +16,7 @@ const Checkout = () => {
   const [orderNote, setOrderNote] = useState("");
 
   const entries = {
-    abule: 50,
+    abule: 10,
     agege: 300,
     agidingbi: 500,
     aguda: 300,
@@ -107,7 +107,7 @@ const Checkout = () => {
     redirect_url: "https://gcc-ssa.vercel.app/success.html",
     subaccounts: [
       {
-        id: "RS_4B54A600B0B7380424BA295A393B645B",
+        id: "RS_9A6D440B560005800E890F75CF3FFFA4",
         transaction_charge_type: "percentage",
         transaction_charge: 0,
       },
