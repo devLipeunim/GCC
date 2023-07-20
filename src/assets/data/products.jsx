@@ -48,7 +48,7 @@ const products = [
   {
     id: "01",
     title: "Jollof Rice and Turkey",
-    price: 90.0,
+    price: 150.0,
     image01: product_06_image_01,
     category: "Rice",
 
