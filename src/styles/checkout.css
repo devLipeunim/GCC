@@ -1,3 +1,9 @@
+.sorting__widget select {
+  padding: 7px 15px;
+  border: 1px solid #2122454c;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .checkout__bill {
   background: #fde4e4;
   padding: 30px;
@@ -9,6 +15,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .sorting__widget select {
+    width: 100% !important;
+    font-size: 0.8rem;
+  }
   .checkout__bill h6 {
     font-size: 0.9rem;
   }
