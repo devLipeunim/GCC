@@ -3,6 +3,7 @@
   height: 100px;
   line-height: 100px;
 }
+
 .logo img {
   width: calc(100% - 30%);
 }
@@ -67,7 +68,7 @@
 }
 
 .header__shrink {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   background: #fff;

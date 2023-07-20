@@ -44,6 +44,7 @@ const Header = () => {
         headerRef.current.classList.add("header__shrink");
       } else {
         headerRef.current.classList.remove("header__shrink");
+        window.removeEventListener("scroll")
       }
     });
 
@@ -59,7 +60,6 @@ const Header = () => {
               {" "}
               <img src={logo} alt="logo" />
             </Link>
-            {/* <h5>Tasty Treat</h5> */}
           </div>
 
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>

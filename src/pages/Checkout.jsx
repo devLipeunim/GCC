@@ -16,7 +16,7 @@ const Checkout = () => {
   const [orderNote, setOrderNote] = useState("");
 
   const entries = {
-    abule: 200,
+    abule: 50,
     agege: 300,
     agidingbi: 500,
     aguda: 300,
@@ -99,14 +99,14 @@ const Checkout = () => {
     dispatch(cartActions.clearCart());
   };
   const config = {
-    public_key: "FLWPUBK_TEST-e9ed7f46854efc95342a0d0a48adf0c6-X",
+    public_key: "FLWPUBK-b6d2728606576630081fd6d5dac59f76-X",
     tx_ref: txRef,
     amount: totalAmount,
     currency: "NGN",
     // redirect_url: "https://gcc-ssa.vercel.app/success.html",
     subaccounts: [
       {
-        id: "RS_8219605B02266C5E1B95204AAB066076",
+        id: "RS_9A6D440B560005800E890F75CF3FFFA4",
         transaction_charge_type: "percentage",
         transaction_charge: 0,
       },
