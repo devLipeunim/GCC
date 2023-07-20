@@ -25,7 +25,7 @@ const ProductCard = (props) => {
 
       <div className="product__content">
         <h5>
-          <Link to={`/foods/&#8358;{id}`}>{title}</Link>
+          <Link to={``}>{title}</Link>
         </h5>
         <div style={{display: "flex", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between"}}>
           <span className="product__price">&#8358;{price}</span>

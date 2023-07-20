@@ -94,7 +94,7 @@ const Checkout = () => {
   const cartDataInfo = JSON.stringify(cartData);
   console.log(cartDataInfo);
   const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
-  const totalAmount = cartTotalAmount + Number(deliveryFee) + 50;
+  const totalAmount = parseInt(cartTotalAmount) + parseInt(deliveryFee) + 50;
   const handleClearCart = () => {
     dispatch(cartActions.clearCart());
   };
