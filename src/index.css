@@ -10,10 +10,10 @@
 body {
   background: #fcfcfc;
   font-family: "Istok Web", sans-serif;
-  scroll-behavior: smooth !important;
   overflow-x: hidden;
 }
 html{
+  scroll-behavior: smooth !important;
   overflow-x: hidden;
 }
 
@@ -28,7 +28,7 @@ html{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #212245;
+  background-color: rgb(15, 14, 14);
 }
 
 h1,
@@ -41,7 +41,7 @@ h6 {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: unset;
 }
 
@@ -50,7 +50,7 @@ h2 {
   font-size: 2.1rem;
   font-weight: 600;
   color: rgb(15, 14, 14);
-  /* color: #212245; */
+  /* color: rgb(15, 14, 14); */
 }
 
 section {

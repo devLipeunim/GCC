@@ -29,24 +29,25 @@
   font-weight: 600;
   font-size: 1rem;
   color: rgb(15, 14, 14);
-  /* color: #212245; */
+  /* color: rgb(15, 14, 14); */
 }
 
 .delivery__time-item p {
   color: rgb(15, 14, 14);
-  /* color: #212245; */
+  /* color: rgb(15, 14, 14); */
 }
 .footer__title {
   font-size: 1.1rem;
   color: rgb(15, 14, 14);
-  /* color: #212245; */
+  /* color: rgb(15, 14, 14); */
   font-weight: 600;
 }
 
 .newsletter {
   padding: 5px;
+  position: relative;
   border: 1px solid rgb(15, 14, 14);
-  /* border: 1px solid #212245; */
+  /* border: 1px solid rgb(15, 14, 14); */
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -64,8 +65,10 @@
 }
 
 .newsletter span {
+  position: absolute;
   background: #df2020;
-  padding: 5px 30px;
+  right: 8px;
+  padding: 0px 12px;
   border-radius: 5px;
 }
 
@@ -75,7 +78,7 @@
 
 .newsletter input::placeholder {
   color: rgb(15, 14, 14);
-  /* color: #212245; */
+  /* color: rgb(15, 14, 14); */
 }
 
 .social__links span i {

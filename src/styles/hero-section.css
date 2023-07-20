@@ -74,7 +74,7 @@
 
 .hero__service p {
   color: rgb(15, 14, 14);
-  /* color: #212245; */
+  /* color: rgb(15, 14, 14); */
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -85,4 +85,10 @@
   color: #fff;
   border-radius: 50%;
   font-weight: 500 !important;
+}
+
+@media (max-width: 768px) {
+  .hero__content {
+    padding-top: 40px;
+  }
 }
