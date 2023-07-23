@@ -20,7 +20,7 @@ const ProductCard = (props) => {
   return (
     <div className="product__item">
       <div className="product__img">
-        <img src={image01} alt="product-img" loading="lazy" />
+        <img src={image01} alt="product-img" />
       </div>
 
       <div className="product__content">

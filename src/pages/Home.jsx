@@ -34,6 +34,12 @@ const featureData = [
   },
 ];
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
   const [category, setCategory] = useState("Rice");
   const [allProducts, setAllProducts] = useState(products);
   const [hotPizza, setHotPizza] = useState([]);
@@ -188,9 +194,7 @@ const Home = () => {
             </Col>
 
             <Col lg="12">
-              <div
-                className="food__category"
-              >
+              <div className="food__category">
                 <button
                   className={`all__btn  &#8358;{
                     category === "Rice" ? "foodBtnActive" : ""
@@ -230,7 +234,13 @@ const Home = () => {
 
             {allProducts.map((item) => (
               <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mt-5">
-                <ProductCard item={item} />
+                {isLoading ? (
+                  <h3 className="w-100" style={{ textAlign: "center" }}>
+                    Loading....
+                  </h3>
+                ) : (
+                  <ProductCard item={item} />
+                )}
               </Col>
             ))}
           </Row>
