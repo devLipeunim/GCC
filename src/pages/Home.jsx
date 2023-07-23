@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Helmet from "../components/Helmet/Helmet.jsx";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
-import heroImg from "../assets/images/hero.svg";
+import heroImg from "../assets/images/hero.png";
 import "../styles/hero-section.css";
 import { Link } from "react-router-dom";
 import Category from "../components/UI/category/Category.jsx";
@@ -10,9 +10,6 @@ import featureImg01 from "../assets/images/order.png";
 import featureImg02 from "../assets/images/service-01.png";
 import featureImg03 from "../assets/images/smile.png";
 import products from "../assets/data/products.jsx";
-import foodCategoryImg01 from "../assets/images/hamburger.png";
-import foodCategoryImg02 from "../assets/images/pizza.png";
-import foodCategoryImg03 from "../assets/images/bread.png";
 import ProductCard from "../components/UI/product-card/ProductCard.jsx";
 import whyImg from "../assets/images/location.png";
 import networkImg from "../assets/images/network.png";
@@ -42,12 +39,12 @@ const Home = () => {
   }, []);
   const [category, setCategory] = useState("Rice");
   const [allProducts, setAllProducts] = useState(products);
-  const [hotPizza, setHotPizza] = useState([]);
+  const [hotStew, setHotStew] = useState([]);
 
   useEffect(() => {
-    const filteredPizza = products.filter((item) => item.category === "Pizza");
-    const slicePizza = filteredPizza.slice(0, 4);
-    setHotPizza(slicePizza);
+    const filteredSoup = products.filter((item) => item.category === "Soup & Swallow");
+    const sliceSoup = filteredSoup.slice(4, 8);
+    setHotStew(sliceSoup);
   }, []);
 
   useEffect(() => {
@@ -196,7 +193,7 @@ const Home = () => {
             <Col lg="12">
               <div className="food__category">
                 <button
-                  className={`all__btn active  &#8358;{
+                  className={`all__btn   ${
                     category === "Rice" ? "foodBtnActive" : ""
                   } `}
                   onClick={() => setCategory("Rice")}
@@ -204,7 +201,7 @@ const Home = () => {
                   Rice
                 </button>
                 <button
-                  className={`d-flex align-items-center gap-2 &#8358;{
+                  className={`d-flex align-items-center gap-2 ${
                     category === "Snacks" ? "foodBtnActive" : ""
                   } `}
                   onClick={() => setCategory("Snacks")}
@@ -213,7 +210,7 @@ const Home = () => {
                 </button>
 
                 <button
-                  className={`d-flex align-items-center gap-2 &#8358;{
+                  className={`d-flex align-items-center gap-2 ${
                     category === "Soup & Swallow" ? "foodBtnActive" : ""
                   } `}
                   onClick={() => setCategory("Soup & Swallow")}
@@ -222,7 +219,7 @@ const Home = () => {
                 </button>
 
                 <button
-                  className={`d-flex align-items-center gap-2 &#8358;{
+                  className={`d-flex align-items-center gap-2 ${
                     category === "Sides" ? "foodBtnActive" : ""
                   } `}
                   onClick={() => setCategory("Sides")}
@@ -235,9 +232,9 @@ const Home = () => {
             {allProducts.map((item) => (
               <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mt-5">
                 {isLoading ? (
-                  <h3 className="w-100" style={{ textAlign: "center" }}>
+                  <h4 className="w-100" style={{ textAlign: "center" }}>
                     Loading....
-                  </h3>
+                  </h4>
                 ) : (
                   <ProductCard item={item} />
                 )}
@@ -315,10 +312,10 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="text-center mb-5 ">
-              <h2>Hot Pizza</h2>
+              <h2>Hot Stew</h2>
             </Col>
 
-            {hotPizza.map((item) => (
+            {hotStew.map((item) => (
               <Col lg="3" md="4" sm="6" xs="6" key={item.id}>
                 <ProductCard item={item} />
               </Col>

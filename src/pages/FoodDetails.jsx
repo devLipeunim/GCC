@@ -100,13 +100,13 @@ const FoodDetails = () => {
             <Col lg="12">
               <div className="tabs d-flex align-items-center gap-5 py-3">
                 <h6
-                  className={` &#8358;{tab === "desc" ? "tab__active" : ""}`}
+                  className={` ${tab === "desc" ? "tab__active" : ""}`}
                   onClick={() => setTab("desc")}
                 >
                   Description
                 </h6>
                 <h6
-                  className={` &#8358;{tab === "rev" ? "tab__active" : ""}`}
+                  className={` ${tab === "rev" ? "tab__active" : ""}`}
                   onClick={() => setTab("rev")}
                 >
                   Review
