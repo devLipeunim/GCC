@@ -196,7 +196,7 @@ const Home = () => {
             <Col lg="12">
               <div className="food__category">
                 <button
-                  className={`all__btn  &#8358;{
+                  className={`all__btn active  &#8358;{
                     category === "Rice" ? "foodBtnActive" : ""
                   } `}
                   onClick={() => setCategory("Rice")}

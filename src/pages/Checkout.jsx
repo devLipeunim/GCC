@@ -156,7 +156,6 @@ const Checkout = () => {
       onClose: () => {
       },
     });
-
   };
   return (
     <Helmet title="Checkout">
