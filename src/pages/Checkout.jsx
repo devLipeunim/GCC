@@ -100,7 +100,7 @@ const Checkout = () => {
     dispatch(cartActions.clearCart());
   };
   const config = {
-    public_key: "FLWPUBK-b6d2728606576630081fd6d5dac59f76-X",
+    public_key: "FLWPUBK_TEST-e9ed7f46854efc95342a0d0a48adf0c6-X",
     tx_ref: txRef,
     amount: totalAmount,
     currency: "NGN",
